@@ -1,7 +1,7 @@
 import mongoode from 'mongoose'
 import { ENV } from './env.js'
 
-export const connetDB = async () => {
+export const connectDB = async () => {
     try {
         const connection = await mongoode.connect(ENV.DB_URL)
         console.log("Connected to DataBase ✅😂", connection.connection.host)
