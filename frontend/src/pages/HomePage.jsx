@@ -3,12 +3,12 @@ import {
   ArrowRightIcon,
   CheckIcon,
   Code2Icon,
-  SparklesIcon,
+  MessageCircleCode,
   UsersIcon,
   VideoIcon,
   ZapIcon,
 } from "lucide-react";
-import { GoogleOneTap, SignInButton, SignOutButton } from "@clerk/clerk-react";
+import { SignInButton } from "@clerk/clerk-react";
 
 function HomePage() {
   return (
@@ -24,7 +24,7 @@ function HomePage() {
             className="flex items-center gap-3 hover:scale-105 transition-transform duration-200"
           >
             <div className="size-10 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center shadow-lg">
-              <SparklesIcon className="size-6 text-white" />
+              <MessageCircleCode className="size-6 text-white" />
             </div>
 
             <div className="flex flex-col">
@@ -90,7 +90,7 @@ function HomePage() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <SignInButton mode="modal">
-                <button className="btn btn-primary btn-lg">
+                <button className="btn btn-primary btn-lg  hover:shadow-xl transition-all duration-200 hover:scale-105">
                   Start Now
                   <ArrowRightIcon className="size-5" />
                 </button>
