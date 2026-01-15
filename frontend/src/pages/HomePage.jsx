@@ -8,7 +8,7 @@ import {
   VideoIcon,
   ZapIcon,
 } from "lucide-react";
-import { SignInButton, SignOutButton } from "@clerk/clerk-react";
+import { GoogleOneTap, SignInButton, SignOutButton } from "@clerk/clerk-react";
 
 function HomePage() {
   return (
@@ -86,24 +86,23 @@ function HomePage() {
                 Multi-Language
               </div>
             </div>
-          </div>
 
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <SignInButton mode="modal">
+                <button className="btn btn-primary btn-lg">
+                  Start Now
+                  <ArrowRightIcon className="size-5" />
+                </button>
+              </SignInButton>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <SignInButton mode="modal">
-              <button className="btn btn-primary btn-lg">
-                Start Now
-                <ArrowRightIcon className="size-5" />
+              <button className="btn btn-outline btn-lg">
+                <VideoIcon className="size-5" />
+                Watch Demo
               </button>
-            </SignInButton>
+            </div>
 
-            <button className="btn btn-outline btn-lg">
-              <VideoIcon className="size-5" />
-              Watch Demo
-            </button>
           </div>
-
 
           {/* RIGHT IMAGE */}
           <img
@@ -113,6 +112,8 @@ function HomePage() {
           />
         </div>
       </div>
+
+
 
       {/* FEATURES SECTION */}
       <div className="max-w-7xl mx-auto px-4 py-20">
