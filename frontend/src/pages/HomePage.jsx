@@ -13,6 +13,8 @@ import { SignInButton, SignOutButton } from "@clerk/clerk-react";
 function HomePage() {
   return (
     <div className="bg-gradient-to-br from-base-100 via-base-200 to-base-300 md:font-mono">
+
+
       {/* NAVBAR */}
       <nav className="bg-base-100/80 backdrop-blur-md border-b border-primary/20 sticky top-0 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
@@ -43,10 +45,13 @@ function HomePage() {
         </div>
       </nav>
 
+
       {/* HERO SECTION */}
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-5 items-center">
+
           {/* LEFT CONTENT */}
+
           <div className="space-y-8">
             <div className="badge badge-primary badge-lg">
               <ZapIcon className="size-4" />
@@ -83,7 +88,23 @@ function HomePage() {
             </div>
           </div>
 
-          
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4">
+            <SignInButton mode="modal">
+              <button className="btn btn-primary btn-lg">
+                Start Now
+                <ArrowRightIcon className="size-5" />
+              </button>
+            </SignInButton>
+
+            <button className="btn btn-outline btn-lg">
+              <VideoIcon className="size-5" />
+              Watch Demo
+            </button>
+          </div>
+
+
           {/* RIGHT IMAGE */}
           <img
             src="/hero.png"
